@@ -8,10 +8,6 @@
 import Foundation
 import SystemConfiguration
 import UIKit
-import CoreData
-//import PopupDialog
-
-//let context = appdelegateAll.persistentContainer.viewContext
 
 //CHECK INTERNET CONNECTION
 
@@ -54,26 +50,6 @@ func checkIfConnectedToNetwork(_ viewDisplay: UIView) -> Bool{
 }
 
 
-//CoreData
-
-
-// delete
-func delete(){
-//    context.delete()
-//    saveContext()
-//    fetch()
-}
-
-//func fetch(){
-//    let request = NSFetchRequest<MoviesModel>(entityName: "MoviesModel")
-//    
-//    do{
-//        try context.fetch(request)
-//    } catch{
-//        print(error)
-//    }
-//}
-
 //OTHERS
 let imageUrl = "https://www.themoviedb.org/t/p/w1280"
 let time_toast = 3.0
@@ -93,23 +69,4 @@ let bullet = "\u{2022}"
 
 let ERROR_NOINTERNET  = "You appear offline. Please check your internet connection."
 
-//Alert
-//func alertCustom(_ msg: String, _ owner: UIViewController) {
-//    let alertVC = AlertViewController(nibName: "AlertViewController", bundle: nil)
-//    let popup = PopupDialog(viewController: alertVC, buttonAlignment: .horizontal, transitionStyle: .zoomIn, tapGestureDismissal: true)
-//    let paragraphStyle = NSMutableParagraphStyle()
-//        paragraphStyle.lineSpacing = 8
-//        paragraphStyle.alignment = .center
-//        let attrString = NSMutableAttributedString(string: msg)
-//        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
-//    alertVC.msgLbl.attributedText = attrString
-//    let buttonTwo = DefaultButton(title: "OK") {
-//        
-//    }
-//    buttonTwo.backgroundColor = UIColor(red: 255.0/255.0, green: 51.0/255.0, blue: 102.0/255.0, alpha: 1)
-//    buttonTwo.titleColor = UIColor.white
-//    buttonTwo.titleFont = UIFont.init(name: "ProximaNova-Semibold", size: 16)!
-//    popup.addButtons([buttonTwo])
-//    owner.present(popup, animated: true, completion: nil)
-//}
 

@@ -146,6 +146,9 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-qn-MJ7">
                                                             <rect key="frame" x="0.0" y="147" width="151" height="75"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="75" id="ztG-kE-3iI"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>

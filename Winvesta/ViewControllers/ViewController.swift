@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         movieCollectionView.register(UINib(nibName: "MoviesCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
-//        movieCollectionView.collectionViewLayout = self
         
         if checkIfConnectedToNetwork(self.view){
             deleteData()
@@ -60,6 +59,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //PREPARE TO LOAD
     func loadForPage(_ page: Int) {
         if !pages.contains(page){
             pages.append(page)
@@ -81,12 +81,15 @@ class ViewController: UIViewController {
 
     }
     
+    //CALL FOR RELOAD. DISABLE USER INTERACTION WHILE RELOADING.
     func callForReload(_ viewCollection: UICollectionView) {
         viewCollection.isUserInteractionEnabled = false
         viewCollection.reloadData()
         viewCollection.isUserInteractionEnabled = true
     }
     
+    
+    //FILTERING AND STORING DATA IN COREDATA
     func addData(_ dataArray: [MovieMDB]){
         for data in dataArray{
             let model = MoviesModel(context: context)
@@ -104,6 +107,7 @@ class ViewController: UIViewController {
         
     }
     
+    //DELETE COMPLETE DATA IN COREDATA
     func deleteData(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MoviesModel")
 
@@ -118,7 +122,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //FETCH DATA FROM COREDATA
     func fetchData() -> [MoviesModel] {
         
         let request = NSFetchRequest<MoviesModel>(entityName: "MoviesModel")
@@ -131,11 +135,11 @@ class ViewController: UIViewController {
             }
     }
     
+    //PREPARING FOR SEGUE
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "movieDetailedPage"{
             if let data = sender as? MoviesModel, let id = data.movieId, let image = data.image, let discription = data.overView, let name = data.name, let votes = data.votes as? Double, let genre = data.genres{
                 if let vc = segue.destination as? DetailViewController{
-                    
                     vc.id = Int(id)
                     vc.discription = discription
                     vc.name = name
@@ -152,7 +156,7 @@ class ViewController: UIViewController {
     
 }
 
-
+//COLLECTIONVIEW DELEGATE AND DATASOURCE
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -172,14 +176,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             cell.callForUse(imageStr, name)
         }
         cell.loadPercentageLoader(dataView.votes)
-        
-        
-        
-        
-        
         return cell
     }
     
+    
+    //CONFIRMING THE LAYOUT OF THE COLLECTION VIEW
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if device == .phone{
             let totalCellWidth =  150 * 2
@@ -197,8 +198,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let dataView = fetchData()[indexPath.row]
-        self.performSegue(withIdentifier: "movieDetailedPage", sender: dataView)
+        if checkIfConnectedToNetwork(self.view){
+            let dataView = fetchData()[indexPath.row]
+            self.performSegue(withIdentifier: "movieDetailedPage", sender: dataView)
+        }
+        
         
         
     }
@@ -206,6 +210,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
 }
 
+//COLLECTION VIEW PAGINATION
 extension ViewController: UIScrollViewDelegate{
 
     
@@ -232,51 +237,6 @@ extension ViewController: UIScrollViewDelegate{
     
 
 }
-
-
-//protocol ReusableView: class {
-//    static var defaultReuseIdentifier: String { get }
-//}
-//
-//extension ReusableView where Self: UIView {
-//    static var defaultReuseIdentifier: String {
-//        return NSStringFromClass(self)
-//    }
-//}
-//
-//extension UICollectionViewCell: ReusableView {
-//}
-//protocol NibLoadableView: class {
-//    static var nibName: String { get }
-//}
-//
-//extension NibLoadableView where Self: UIView {
-//    static var nibName: String {
-//        return NSStringFromClass(self).components(separatedBy: ".").last!
-////        return NSStringFromClass(self).componentsSeparatedByString(".").last!
-//    }
-//}
-//extension UICollectionView {
-//
-//    func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView {
-//        register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
-//    }
-//
-//    func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
-//        let bundle = Bundle(for: T.self)
-//        let nib = UINib(nibName: T.nibName, bundle: bundle)
-//
-//        register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
-//    }
-//
-//    func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: NSIndexPath) -> T where T: ReusableView {
-//        guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath as IndexPath) as? T else {
-//            fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
-//        }
-//
-//        return cell
-//    }
-//}
 
 
 

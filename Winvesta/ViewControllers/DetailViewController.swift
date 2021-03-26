@@ -33,24 +33,7 @@ class DetailViewController: UIViewController {
     var crewData: [CrewMDB]?
     var castData = [MovieCastMDB]()
     
-    var crewFilter: String{
-        get{
-            var strCreator = ""
-            if let crew = crewData {
-                for individual in crew{
-                    if individual.job == "Director" || individual.job == "Producer", let nameIndividual = individual.name, let jobIndividual = individual.job{
-                        strCreator.append("\(bullet) \(String(describing: jobIndividual)): \(String(describing: nameIndividual)) \n")
-                    } else if let nameIndividual = individual.name, let jobIndividual = individual.job{
-                        strCreator.append("\(bullet) \(String(describing: jobIndividual)): \(String(describing: nameIndividual)) \n")
-                    }
-                }
-                return strCreator
-            }
-            
-            return strCreator
-        }
-    }
-    
+    //GET GENRES
     var filterGenres: String{
         get{
             var str = ""
@@ -72,6 +55,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //GET CREATORS
     var creatorMethod: String{
         get{
             var strCreator = ""
@@ -88,6 +72,25 @@ class DetailViewController: UIViewController {
         
     }
     
+    //FILTER CREW MEMBERS
+    var crewFilter: String{
+        get{
+            var strCreator = ""
+            if let crew = crewData {
+                for individual in crew{
+                    if individual.job == "Director" || individual.job == "Producer", let nameIndividual = individual.name, let jobIndividual = individual.job{
+                        strCreator.append("\(bullet) \(String(describing: jobIndividual)): \(String(describing: nameIndividual)) \n")
+                    } else if let nameIndividual = individual.name, let jobIndividual = individual.job{
+                        strCreator.append("\(bullet) \(String(describing: jobIndividual)): \(String(describing: nameIndividual)) \n")
+                    }
+                }
+                return strCreator
+            }
+            
+            return strCreator
+        }
+    }
+    
     
     
     override func viewDidLoad() {
@@ -101,6 +104,7 @@ class DetailViewController: UIViewController {
         setUp()
     }
     
+    //GET THE COMPLETE CREW VIA API
     func apiCrew(_ idMovie: Int){
         MovieMDB.credits(movieID: idMovie) { (dataReturn, creditMBD) in
             if let crewRecieved = creditMBD{
@@ -116,7 +120,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
+    //SET UP THE PAGE
     func setUp() {
         self.genresLabel.text = filterGenres
         guard let imageData = image, let nameData = name, let discriptionData = discription, let votesData = votes else {
@@ -129,6 +133,7 @@ class DetailViewController: UIViewController {
         loadPercentageLoader(votesData)
     }
     
+    //LOADING OF THE VOTES
     func loadPercentageLoader(_ data: Double){
         let value = Int(data * 10)
         if value > 70{
@@ -148,7 +153,7 @@ class DetailViewController: UIViewController {
     
 }
 
-
+//COLLECTIONVIEW DELEGATE AND DATASOURCE
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
