@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		035DDC8663439E0EF3674BF7 /* Pods_Winvesta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EE7DED903A3DABAEAB33C9 /* Pods_Winvesta.framework */; };
+		480751322608DFB000748A98 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480751312608DFB000748A98 /* Toast.swift */; };
+		4819CBE9260A1B900019D0F1 /* MoviesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4819CBE8260A1B900019D0F1 /* MoviesCell.xib */; };
+		4819CBEC260A1C0A0019D0F1 /* MoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4819CBEB260A1C0A0019D0F1 /* MoviesCell.swift */; };
+		4837AEF52609B30D008B6957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4837AEF42609B30D008B6957 /* Assets.xcassets */; };
+		4849E651260A014A00686FC5 /* Winvesta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4849E64F260A014A00686FC5 /* Winvesta.xcdatamodeld */; };
+		488FB930260DD159004164A5 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FB92F260DD159004164A5 /* CastCollectionViewCell.swift */; };
+		48A4B98D2608D95D00522D78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4B98C2608D95D00522D78 /* AppDelegate.swift */; };
+		48A4B98F2608D95D00522D78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4B98E2608D95D00522D78 /* SceneDelegate.swift */; };
+		48A4B9912608D95D00522D78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4B9902608D95D00522D78 /* ViewController.swift */; };
+		48A4B9942608D95D00522D78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A4B9922608D95D00522D78 /* Main.storyboard */; };
+		48A4B9992608D95E00522D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A4B9972608D95E00522D78 /* LaunchScreen.storyboard */; };
+		48A4B9DD2608DA2100522D78 /* CommonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4B9DC2608DA2100522D78 /* CommonClasses.swift */; };
+		48F4F71F260CB2A8000770FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F71E260CB2A8000770FE /* DetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		480751312608DFB000748A98 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		4819CBE8260A1B900019D0F1 /* MoviesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCell.xib; sourceTree = "<group>"; };
+		4819CBEB260A1C0A0019D0F1 /* MoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCell.swift; sourceTree = "<group>"; };
+		4837AEF42609B30D008B6957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4849E650260A014A00686FC5 /* Winvesta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Winvesta.xcdatamodel; sourceTree = "<group>"; };
+		488FB92F260DD159004164A5 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
+		48A4B9892608D95D00522D78 /* Winvesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winvesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48A4B98C2608D95D00522D78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48A4B98E2608D95D00522D78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		48A4B9902608D95D00522D78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48A4B9932608D95D00522D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48A4B9982608D95E00522D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48A4B99A2608D95E00522D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48A4B9DC2608DA2100522D78 /* CommonClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonClasses.swift; sourceTree = "<group>"; };
+		48F4F71E260CB2A8000770FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		694DED098518FA88AEB34B97 /* Pods-Winvesta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winvesta.debug.xcconfig"; path = "Target Support Files/Pods-Winvesta/Pods-Winvesta.debug.xcconfig"; sourceTree = "<group>"; };
+		A7EE7DED903A3DABAEAB33C9 /* Pods_Winvesta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winvesta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7D497B3326A461BC5B5D32 /* Pods-Winvesta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winvesta.release.xcconfig"; path = "Target Support Files/Pods-Winvesta/Pods-Winvesta.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48A4B9862608D95D00522D78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				035DDC8663439E0EF3674BF7 /* Pods_Winvesta.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22D82CC42E3AEA50900B9AD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				694DED098518FA88AEB34B97 /* Pods-Winvesta.debug.xcconfig */,
+				EA7D497B3326A461BC5B5D32 /* Pods-Winvesta.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		48155B3C26090ECA005A1DF8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4819CBE8260A1B900019D0F1 /* MoviesCell.xib */,
+				4819CBEB260A1C0A0019D0F1 /* MoviesCell.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48A4B9802608D95D00522D78 = {
+			isa = PBXGroup;
+			children = (
+				48A4B98B2608D95D00522D78 /* Winvesta */,
+				48A4B98A2608D95D00522D78 /* Products */,
+				22D82CC42E3AEA50900B9AD5 /* Pods */,
+				95D75EBA5951FE7A1964927F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48A4B98A2608D95D00522D78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48A4B9892608D95D00522D78 /* Winvesta.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48A4B98B2608D95D00522D78 /* Winvesta */ = {
+			isa = PBXGroup;
+			children = (
+				48A4B9E52608DB6700522D78 /* AppDelegateAndFiles */,
+				48A4B9E32608DB2300522D78 /* CommonFiles */,
+				48A4B9E42608DB4300522D78 /* ViewControllers */,
+				48155B3C26090ECA005A1DF8 /* ViewModel */,
+				48A4B9922608D95D00522D78 /* Main.storyboard */,
+				4849E64F260A014A00686FC5 /* Winvesta.xcdatamodeld */,
+				4837AEF42609B30D008B6957 /* Assets.xcassets */,
+				48A4B9972608D95E00522D78 /* LaunchScreen.storyboard */,
+				48A4B99A2608D95E00522D78 /* Info.plist */,
+			);
+			path = Winvesta;
+			sourceTree = "<group>";
+		};
+		48A4B9DF2608DB1600522D78 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				480751312608DFB000748A98 /* Toast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		48A4B9E32608DB2300522D78 /* CommonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				48A4B9DF2608DB1600522D78 /* Toast */,
+				48A4B9DC2608DA2100522D78 /* CommonClasses.swift */,
+			);
+			path = CommonFiles;
+			sourceTree = "<group>";
+		};
+		48A4B9E42608DB4300522D78 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				48A4B9902608D95D00522D78 /* ViewController.swift */,
+				48F4F71E260CB2A8000770FE /* DetailViewController.swift */,
+				488FB92F260DD159004164A5 /* CastCollectionViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		48A4B9E52608DB6700522D78 /* AppDelegateAndFiles */ = {
+			isa = PBXGroup;
+			children = (
+				48A4B98C2608D95D00522D78 /* AppDelegate.swift */,
+				48A4B98E2608D95D00522D78 /* SceneDelegate.swift */,
+			);
+			path = AppDelegateAndFiles;
+			sourceTree = "<group>";
+		};
+		95D75EBA5951FE7A1964927F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7EE7DED903A3DABAEAB33C9 /* Pods_Winvesta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48A4B9882608D95D00522D78 /* Winvesta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48A4B99D2608D95E00522D78 /* Build configuration list for PBXNativeTarget "Winvesta" */;
+			buildPhases = (
+				505C25E4CBB8AEE2C9DE5B7C /* [CP] Check Pods Manifest.lock */,
+				48A4B9852608D95D00522D78 /* Sources */,
+				48A4B9862608D95D00522D78 /* Frameworks */,
+				48A4B9872608D95D00522D78 /* Resources */,
+				EC46065C1CDAE09012284F2D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Winvesta;
+			productName = Winvesta;
+			productReference = 48A4B9892608D95D00522D78 /* Winvesta.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48A4B9812608D95D00522D78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					48A4B9882608D95D00522D78 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 48A4B9842608D95D00522D78 /* Build configuration list for PBXProject "Winvesta" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48A4B9802608D95D00522D78;
+			productRefGroup = 48A4B98A2608D95D00522D78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48A4B9882608D95D00522D78 /* Winvesta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48A4B9872608D95D00522D78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48A4B9992608D95E00522D78 /* LaunchScreen.storyboard in Resources */,
+				4837AEF52609B30D008B6957 /* Assets.xcassets in Resources */,
+				48A4B9942608D95D00522D78 /* Main.storyboard in Resources */,
+				4819CBE9260A1B900019D0F1 /* MoviesCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		505C25E4CBB8AEE2C9DE5B7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Winvesta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC46065C1CDAE09012284F2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Winvesta/Pods-Winvesta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Winvesta/Pods-Winvesta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Winvesta/Pods-Winvesta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48A4B9852608D95D00522D78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48A4B9912608D95D00522D78 /* ViewController.swift in Sources */,
+				48A4B9DD2608DA2100522D78 /* CommonClasses.swift in Sources */,
+				4849E651260A014A00686FC5 /* Winvesta.xcdatamodeld in Sources */,
+				480751322608DFB000748A98 /* Toast.swift in Sources */,
+				48A4B98D2608D95D00522D78 /* AppDelegate.swift in Sources */,
+				4819CBEC260A1C0A0019D0F1 /* MoviesCell.swift in Sources */,
+				488FB930260DD159004164A5 /* CastCollectionViewCell.swift in Sources */,
+				48A4B98F2608D95D00522D78 /* SceneDelegate.swift in Sources */,
+				48F4F71F260CB2A8000770FE /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48A4B9922608D95D00522D78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48A4B9932608D95D00522D78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48A4B9972608D95E00522D78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48A4B9982608D95E00522D78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48A4B99B2608D95E00522D78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		48A4B99C2608D95E00522D78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48A4B99E2608D95E00522D78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 694DED098518FA88AEB34B97 /* Pods-Winvesta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D2D847X345;
+				INFOPLIST_FILE = Winvesta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = winvesta.Winvesta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48A4B99F2608D95E00522D78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA7D497B3326A461BC5B5D32 /* Pods-Winvesta.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D2D847X345;
+				INFOPLIST_FILE = Winvesta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = winvesta.Winvesta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48A4B9842608D95D00522D78 /* Build configuration list for PBXProject "Winvesta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48A4B99B2608D95E00522D78 /* Debug */,
+				48A4B99C2608D95E00522D78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48A4B99D2608D95E00522D78 /* Build configuration list for PBXNativeTarget "Winvesta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48A4B99E2608D95E00522D78 /* Debug */,
+				48A4B99F2608D95E00522D78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4849E64F260A014A00686FC5 /* Winvesta.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4849E650260A014A00686FC5 /* Winvesta.xcdatamodel */,
+			);
+			currentVersion = 4849E650260A014A00686FC5 /* Winvesta.xcdatamodel */;
+			path = Winvesta.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 48A4B9812608D95D00522D78 /* Project object */;
+}

@@ -1,0 +1,26 @@
+PODS:
+  - FlexibleGauge (0.1.0)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - TMDBSwift (0.5.1)
+
+DEPENDENCIES:
+  - FlexibleGauge
+  - SDWebImage
+  - TMDBSwift
+
+SPEC REPOS:
+  trunk:
+    - FlexibleGauge
+    - SDWebImage
+    - TMDBSwift
+
+SPEC CHECKSUMS:
+  FlexibleGauge: 37be098ee29707ff00ac1859fc0654dd81a015f8
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  TMDBSwift: 9220f3dcee23372c05b92f8c111f5f4c37185aee
+
+PODFILE CHECKSUM: 099bc831749a3059628e348b21a523f6eba5bb27
+
+COCOAPODS: 1.9.3

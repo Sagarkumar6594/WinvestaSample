@@ -1,0 +1,6 @@
+framework module FlexibleGauge {
+  umbrella header "FlexibleGauge-umbrella.h"
+
+  export *
+  module * { export * }
+}

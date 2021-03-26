@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Winvesta/Pods-Winvesta-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FlexibleGauge/FlexibleGauge.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/TMDBSwift/TMDBSwift.framework
