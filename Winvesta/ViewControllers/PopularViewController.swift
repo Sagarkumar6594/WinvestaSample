@@ -10,7 +10,7 @@ import TMDBSwift
 import CoreData
 import SDWebImage
 
-class ViewController: UIViewController {
+class PopularViewController: UIViewController {
 
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
@@ -157,7 +157,7 @@ class ViewController: UIViewController {
 }
 
 //COLLECTIONVIEW DELEGATE AND DATASOURCE
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension PopularViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let data = fetchData()
@@ -202,18 +202,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             let dataView = fetchData()[indexPath.row]
             self.performSegue(withIdentifier: "movieDetailedPage", sender: dataView)
         }
-        
-        
-        
     }
     
     
 }
 
 //COLLECTION VIEW PAGINATION
-extension ViewController: UIScrollViewDelegate{
+extension PopularViewController: UIScrollViewDelegate{
 
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
            let offsetY = scrollView.contentOffset.y
            let contentHeight = scrollView.contentSize.height
@@ -237,6 +233,4 @@ extension ViewController: UIScrollViewDelegate{
     
 
 }
-
-
 

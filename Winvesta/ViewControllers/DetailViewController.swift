@@ -78,8 +78,7 @@ class DetailViewController: UIViewController {
             var strCreator = ""
             if let crew = crewData {
                 for individual in crew{
-                    if individual.job == "Director" || individual.job == "Producer", let nameIndividual = individual.name, let jobIndividual = individual.job{
-                        strCreator.append("\(bullet) \(String(describing: jobIndividual)): \(String(describing: nameIndividual)) \n")
+                    if individual.job == "Director" || individual.job == "Producer"{
                     } else if let nameIndividual = individual.name, let jobIndividual = individual.job{
                         strCreator.append("\(bullet) \(String(describing: jobIndividual)): \(String(describing: nameIndividual)) \n")
                     }
@@ -137,12 +136,12 @@ class DetailViewController: UIViewController {
     func loadPercentageLoader(_ data: Double){
         let value = Int(data * 10)
         if value > 70{
-            votesView.emptyColor = UIColor.green.withAlphaComponent(0.6)
+            votesView.emptyColor = UIColor.green.withAlphaComponent(0.3)
             votesView.filledColor = UIColor.green.withAlphaComponent(1)
             votesView.innerTextColor = UIColor.green.withAlphaComponent(1)
             votesView.innerText = String(value).appending("%")
         } else{
-            votesView.emptyColor = UIColor.red.withAlphaComponent(0.6)
+            votesView.emptyColor = UIColor.red.withAlphaComponent(0.3)
             votesView.filledColor = UIColor.red.withAlphaComponent(1)
             votesView.innerTextColor = UIColor.red.withAlphaComponent(1)
             votesView.innerText = String(value).appending("%")

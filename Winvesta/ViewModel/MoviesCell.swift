@@ -36,12 +36,12 @@ class MoviesCell: UICollectionViewCell {
     func loadPercentageLoader(_ data: Double){
         let value = Int(data * 10)
         if value > 70{
-            percentageLoader.emptyColor = UIColor.green.withAlphaComponent(0.6)
+            percentageLoader.emptyColor = UIColor.green.withAlphaComponent(0.3)
             percentageLoader.filledColor = UIColor.green.withAlphaComponent(1)
             percentageLoader.innerTextColor = UIColor.green.withAlphaComponent(1)
             percentageLoader.innerText = String(value).appending("%")
         } else{
-            percentageLoader.emptyColor = UIColor.red.withAlphaComponent(0.6)
+            percentageLoader.emptyColor = UIColor.red.withAlphaComponent(0.3)
             percentageLoader.filledColor = UIColor.red.withAlphaComponent(1)
             percentageLoader.innerTextColor = UIColor.red.withAlphaComponent(1)
             percentageLoader.innerText = String(value).appending("%")
