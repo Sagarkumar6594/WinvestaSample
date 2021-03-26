@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         movieCollectionView.register(UINib(nibName: "MoviesCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
-//        movieCollectionView.collectionViewLayout = self
         
         if checkIfConnectedToNetwork(self.view){
             deleteData()
@@ -197,8 +196,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let dataView = fetchData()[indexPath.row]
-        self.performSegue(withIdentifier: "movieDetailedPage", sender: dataView)
+        if checkIfConnectedToNetwork(self.view){
+            let dataView = fetchData()[indexPath.row]
+            self.performSegue(withIdentifier: "movieDetailedPage", sender: dataView)
+        } 
         
         
     }
@@ -208,7 +209,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
 extension ViewController: UIScrollViewDelegate{
 
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
            let offsetY = scrollView.contentOffset.y
            let contentHeight = scrollView.contentSize.height
@@ -234,49 +234,6 @@ extension ViewController: UIScrollViewDelegate{
 }
 
 
-//protocol ReusableView: class {
-//    static var defaultReuseIdentifier: String { get }
-//}
-//
-//extension ReusableView where Self: UIView {
-//    static var defaultReuseIdentifier: String {
-//        return NSStringFromClass(self)
-//    }
-//}
-//
-//extension UICollectionViewCell: ReusableView {
-//}
-//protocol NibLoadableView: class {
-//    static var nibName: String { get }
-//}
-//
-//extension NibLoadableView where Self: UIView {
-//    static var nibName: String {
-//        return NSStringFromClass(self).components(separatedBy: ".").last!
-////        return NSStringFromClass(self).componentsSeparatedByString(".").last!
-//    }
-//}
-//extension UICollectionView {
-//
-//    func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView {
-//        register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
-//    }
-//
-//    func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
-//        let bundle = Bundle(for: T.self)
-//        let nib = UINib(nibName: T.nibName, bundle: bundle)
-//
-//        register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
-//    }
-//
-//    func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: NSIndexPath) -> T where T: ReusableView {
-//        guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath as IndexPath) as? T else {
-//            fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
-//        }
-//
-//        return cell
-//    }
-//}
 
 
 
